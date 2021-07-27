@@ -1,6 +1,6 @@
 # config/routes.yaml
 
 # this route defines the URL (the path to the page) and points to a controller that builds the page
-about-me:
-   path: /about-me
-   controller: App\Controller\LearningController::aboutMe
+# about-me:
+#    path: /about-me
+#    controller: App\Controller\LearningController::aboutMe
