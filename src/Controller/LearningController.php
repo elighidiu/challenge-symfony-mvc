@@ -27,10 +27,13 @@ class LearningController extends AbstractController
     public function showMyName(): Response {
 
         $form = $this->createFormBuilder()
+            ->setAction($this->generateUrl('change-my-name'))
+            ->setMethod('POST')
             ->add('name', TextType::class)
             ->add('save', SubmitType::class, ['label' => 'Save Name'])
             ->getForm();
 
+            // createView() method to build another object with the visual representation of the form
         return $this->render('learning/show_my_name.html.twig', [
             'name' => 'Lorem ipsum', 'form' => $form->createView(),
         ]);
